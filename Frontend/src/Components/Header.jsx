@@ -1,12 +1,12 @@
 import React, { useEffect, useContext } from 'react'
 import { IoIosSearch } from "react-icons/io";
-import { MainContext } from '../context';
+import { MainContext } from '../Contextt';
 
 export default function Header() {
-    const { getSearchName, setMovies, getMovies , search} = useContext(MainContext);
+    const { getsearchname, setMovies, getMovies , search} = useContext(MainContext);
 
     const searchMovie = (e) => {
-        getSearchName(e.target.value);
+        getsearchname(e.target.value);
     }
 
     useEffect(
@@ -23,7 +23,7 @@ export default function Header() {
                     <img src="looogo.png" alt="" width={"170px"} />
                 </div>
                 <div className='flex flex-row justify-center items-center gap-2'>
-                    <input type="text" getSearchName={getSearchName} onKeyUp={searchMovie} name='movieName' placeholder='Enter movie name' className=' sm:w-sm md:w-md  lg:w-lg xl:w-xl bg-white px-3 py-1 outline-none' />
+                    <input type="text" getsearchname={getsearchname} onKeyUp={searchMovie} name='movieName' placeholder='Enter movie name' className=' sm:w-sm md:w-md  lg:w-lg xl:w-xl bg-white px-3 py-1 outline-none' />
                     <IoIosSearch className='text-2xl text-white' />
                 </div>
                 <div className='flex justify-center items-center gap-2'>

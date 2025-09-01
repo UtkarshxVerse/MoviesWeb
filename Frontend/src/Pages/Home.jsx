@@ -1,6 +1,6 @@
 import React, { useContext} from 'react'
 import MovieCard from '../Components/MovieCard'
-import { MainContext } from '../context'
+import { MainContext } from '../Contextt'
 
 export default function Home() {
   const{movies} = useContext(MainContext);

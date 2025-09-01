@@ -27,7 +27,7 @@ function Context(props) {
         )
     }
 
-    const getSearchName = (searchMovie) => {
+    const getsearchname = (searchMovie) => {
         setSearch(searchMovie);
     }
 
@@ -38,7 +38,7 @@ function Context(props) {
     )
 
     return (
-        <MainContext.Provider value={{ movies, setMovies, search, setSearch,getMovies, getSearchName }}>
+        <MainContext.Provider value={{ movies, setMovies, search, setSearch, getMovies, getsearchname }}>
             {
                 props.children
             }
